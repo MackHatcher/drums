@@ -1,0 +1,318 @@
+body {
+    background-color: rgb(187, 186, 186);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bpm {
+    position: absolute;
+    top: 50px;
+    left: 65px;
+    color: white;
+}
+
+.recording-status {
+    position: absolute;
+    top: 30px;
+    left: 65px;
+    color: white;
+}
+
+.record {
+    position: absolute;
+    top: 35px;
+    right: 675px;
+}
+
+.record:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.play {
+    position: absolute;
+    top: 35px;
+    right: 650px;
+}
+
+.play:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.save-record {
+    position: absolute;
+    top: 35px;
+    right: 695px;
+}
+
+.save-record:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.drum-kit {
+    
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    margin-left: 50px;
+    width: 850px;
+    height: 730px;
+    align-items: center;
+    background-color: rgb(107, 107, 107);
+}
+
+.open-hat {
+    position: absolute;
+    bottom: 260px; 
+    left: 240px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 60px;   
+}
+
+.hat-open-label {
+    position: absolute;
+    top: 46px; 
+    left: 45px;
+}
+
+.close-hat {
+    position: absolute;
+    bottom: 215px; 
+    left: 200px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 60px; 
+}
+
+.hat-closed-label {
+    position: absolute;
+    top: 46px; 
+    left: 44px;
+}
+
+.kick1 {
+    position: absolute;
+    bottom: 100px; 
+    left: 215px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.kick-one-label {
+    position: absolute;
+    bottom: 80px; 
+    left: 95px;
+}
+
+.kick2 {
+    position: absolute;
+    bottom: 100px;
+    left: 420px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.kick-two-label {
+    position: absolute;
+    bottom: 80px; 
+    left: 95px;
+}
+
+.snare {
+    position: absolute;
+    bottom: 175px;
+    left: 345px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 100px;
+}
+
+.snare-label {
+    position: absolute;
+    bottom: 50px; 
+    left: 62px;
+}
+
+.tom1 {
+    position: absolute;
+    bottom: 515px; 
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: -100px;
+    margin-left: 220px;
+}
+
+.tom-one-label {
+    position: absolute;
+    top: 45px; 
+    left: 41px;
+}
+
+.tom2 {
+    position: absolute;
+    bottom: 510px; 
+    left: 200px;
+    width: 115px;
+    height: 115px;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: -100px;
+    margin-left: 220px;
+}
+
+.tom-two-label {
+    position: absolute;
+    top: 53px; 
+    left: 47px;
+}
+
+.floor {
+    position: absolute;
+    bottom: 295px; 
+    left: 502px;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.floor-label {
+    position: absolute;
+    bottom: 60px; 
+    left: 70px;
+}
+
+.ride {
+    position: absolute;
+    top: 170px;
+    right: 800px;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+}
+
+.ride-label {
+    position: absolute;
+    top: 84px; 
+    left: 82px;
+}
+
+.crash-one {
+    position: absolute;
+    top: 320px;
+    right: 750px;
+    width: 145px;
+    height: 145px;
+    
+    border-radius: 50%;
+    
+}
+
+.crash-one-label {
+    position: absolute;
+    bottom: 60px; 
+    left: 62px;
+}
+
+.crash-two {
+    position: absolute;
+    top: 200px;
+    left: 190px;
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+}
+
+.crash-two-label {
+    position: absolute;
+    bottom: 57px; 
+    left: 57px;
+}
+
+.splash {
+    position: absolute;
+    top: 155px;
+    left: 340px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.splash-label {
+    position: absolute;
+    top: 37px; 
+    left: 34px;
+}
+
+.china {
+    position: absolute;
+    top: 125px;
+    left: 430px;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.china-label {
+    position: absolute;
+    top: 55px; 
+    left: 51px;
+}
+
+.label {
+    width: 25px;
+    border: 1.5px solid white;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.playing {
+    width: 25px;
+    border: 1.5px solid white;
+    background-color: yellow;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.library {
+    width: 500px;
+    background-color: rgb(107, 107, 107);
+    margin-left: 70px;
+}
+
+
+img.shake {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s; 
+    /* When the animation is finished, start again */
+     
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
