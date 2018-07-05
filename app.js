@@ -51,7 +51,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
     });
 
     let play = document.querySelector('.play');
-    play.addEventListener('click', function (e) {
+    play.addEventListener('click', () => playTrack(recorded))
+
+    let playTrack = function(recorded) {
+        console.log(recorded);
         if (speedCount.value == 20) {
             playbackTimeStamp = 0;
             const playback = setInterval(() => {
@@ -85,8 +88,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
                 }
             }, `${speedCount.value}`)
         }
-    })
-
+    }
     let save = document.querySelector('.save-record');
     save.addEventListener('click', function (e) {
         recorded = [];
@@ -113,122 +115,20 @@ document.addEventListener('DOMContentLoaded', function (e) {
             }else{
                 recName.innerHTML = "Track name: untitled"
             }
-            
             console.log(library)
 
         } 
         savedRecording = [];
     })
 
-   
-   
-    
-
-
-    // play1.addEventListener('click', function (e) {
-    //     const playback = setInterval(() => {
-    //         console.log(storedRecording1);
-    //         const note = storedRecording1.shift();
-    //         console.log(note)
-    //         const audio = document.querySelector(`audio[data-key="${note}"]`);
-
-    //         if (storedRecording1.length > 0) {
-    //             status.innerHTML = ('Playing back...')
-    //         } else {
-    //             status.innerHTML = ('Playback complete.')
-    //         }
-    //         audio.currentTime = 0;
-    //         audio.play();
-
-    //         if (storedRecording1.length == 0) {
-    //             clearInterval(playback)
-    //         }
-    //     }, `${speed1.value}`)
-    // })
-
-    // play2.addEventListener('click', function (e) {
-    //     const playback = setInterval(() => {
-    //         console.log(storedRecording2);
-    //         const note = storedRecording2.shift();
-    //         console.log(note)
-    //         const audio = document.querySelector(`audio[data-key="${note}"]`);
-
-    //         if (storedRecording1.length > 0) {
-    //             status.innerHTML = ('Playing back...')
-    //         } else {
-    //             status.innerHTML = ('Playback complete.')
-    //         }
-    //         audio.currentTime = 0;
-    //         audio.play();
-
-    //         if (storedRecording2.length == 0) {
-    //             clearInterval(playback)
-    //         }
-    //     }, `${speed2.value}`)
-    // })
-
-    // play3.addEventListener('click', function (e) {
-    //     const playback = setInterval(() => {
-    //         console.log(storedRecording3);
-    //         const note = storedRecording3.shift();
-    //         console.log(note)
-    //         const audio = document.querySelector(`audio[data-key="${note}"]`);
-
-    //         if (storedRecording3.length > 0) {
-    //             status.innerHTML = ('Playing back...')
-    //         } else {
-    //             status.innerHTML = ('Playback complete.')
-    //         }
-    //         audio.currentTime = 0;
-    //         audio.play();
-
-    //         if (storedRecording3.length == 0) {
-    //             clearInterval(playback)
-    //         }
-    //     }, `${speed3.value}`)
-    // })
-
-    // play4.addEventListener('click', function (e) {
-    //     const playback = setInterval(() => {
-    //         console.log(storedRecording4);
-    //         const note = storedRecording4.shift();
-    //         console.log(note)
-    //         const audio = document.querySelector(`audio[data-key="${note}"]`);
-
-    //         if (storedRecording4.length > 0) {
-    //             status.innerHTML = ('Playing back...')
-    //         } else {
-    //             status.innerHTML = ('Playback complete.')
-    //         }
-    //         audio.currentTime = 0;
-    //         audio.play();
-
-    //         if (storedRecording4.length == 0) {
-    //             clearInterval(playback)
-    //         }
-    //     }, `${speed4.value}`)
-    // })
-
-    // play5.addEventListener('click', function (e) {
-    //     const playback = setInterval(() => {
-    //         console.log(storedRecording5);
-    //         const note = storedRecording5.shift();
-    //         console.log(note)
-    //         const audio = document.querySelector(`audio[data-key="${note}"]`);
-
-    //         if (storedRecording5.length > 0) {
-    //             status.innerHTML = ('Playing back...')
-    //         } else {
-    //             status.innerHTML = ('Playback complete.')
-    //         }
-    //         audio.currentTime = 0;
-    //         audio.play();
-
-    //         if (storedRecording5.length == 0) {
-    //             clearInterval(playback)
-    //         }
-    //     }, `${speed5.value}`)
-    // })
+    let master = document.getElementById('master-play');
+    master.addEventListener('click', () => {
+        for (let i = 0; i < library.length; i++) {
+           (function() {
+               playTrack(library[i])
+            }())
+        }
+    })
 
     window.addEventListener('keydown', playSound)
     window.addEventListener('keyup', endSound)
