@@ -1,100 +1,133 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Drum Set</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <script src="app.js"></script>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Drum Set</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+                crossorigin="anonymous">
+        <script src="app.js"></script>
 </head>
+
 <body>
-        <div class="recording-status"><span id="status"></span></div>
+        <div class="recording-status">
+                <span id="status"></span>
+        </div>
         <div class="record">
-            <i class="fas fa-microphone-alt"></i>
+                <i class="fas fa-microphone-alt"></i>
         </div>
         <div class="play">
-            <i class="fas fa-play-circle"></i>
+                <i class="fas fa-play-circle"></i>
         </div>
-        <div class="save-record"><i class="fas fa-save"></i></div>
+        <div class="save-record">
+                <i class="fas fa-save"></i>
+        </div>
         <div class="bpm">
-            <span>bpm </span><input id="bpm-set" placeholder="120">
+                <span>Speed: </span>
+                <select class="speed">
+                        <option value="1440">Whole Notes</option>
+                        <option value="720">1/2 Notes</option>
+                        <option value="360">1/4th Notes</option>
+                        <option value="180">1/8th Notes</option>
+                        <option value="90">1/16th Notes</option>
+                        <option value="45">1/32nd Notes</option>
+                        <option value="20">Custom</option>
+                </select>
         </div>
 
-    <div class="drum-kit">
-        
-        <div class="open-hat " data-key="70">
-                <div class="hat-open-label label">F</div>    
-                <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products971430-1200x1200--833770334.png" height="116" width="116">
-        </div>
-        <div class="close-hat" data-key="68">
-                <div class="hat-closed-label label">D</div>
-                <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products971430-1200x1200--833770334.png" height="116" width="116">
-        </div>
-        <div class="snare" data-key="71">
-                <div class="snare-label label">G</div>
-                <img src="http://remo-production.s3.amazonaws.com/media/product_images/ambassador-x-skyndeep.png.600x600_q90_crop-scale.png" height="145" width="145">
-        </div>
-        <div class="kick1" data-key="86">
-                <div class="kick-one-label label">V</div>
-                <img src="http://drumheadauthority.com/wp-content/uploads/2017/05/Remo-Ambassador-Fiberskyn-Drumhead.png" height="215" width="215">
-        </div>
-        <div class="kick2" data-key="66">
-                <div class="kick-two-label label">B</div>
-                <img src="http://drumheadauthority.com/wp-content/uploads/2017/05/Remo-Ambassador-Fiberskyn-Drumhead.png" height="215" width="215">
-        </div>
-        <div class="floor" data-key="75">
-                <div class="floor-label label">K</div>
-                <img src="http://remo-production.s3.amazonaws.com/media/product_images/emperor-hazy-snare-side.png.600x600_q90_crop-scale.png" height="165" width="165">
-        </div>
-        
-        <div class="tom1" data-key="72">
-                <div class="tom-one-label label">H</div>
-                <img src="http://remo-production.s3.amazonaws.com/media/product_images/emperor-hazy-snare-side.png.600x600_q90_crop-scale.png" height="110" width="110">
-        </div>
-        <div class="tom2" data-key="74">
-                <div class="tom-two-label label">J</div>
-                <img src="http://remo-production.s3.amazonaws.com/media/product_images/emperor-hazy-snare-side.png.600x600_q90_crop-scale.png" height="125" width="125">
-        </div>
-        <div class="ride" data-key="85">
-                <div class="ride-label label">U</div>
-                <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products977132-1200x1200-1822702398.png" height="188" width="188">
-        </div>
-        <div class="crash-one" data-key="73">
-                <div class="crash-one-label label">I</div>
-                <img src="https://www.soundattak.co.uk/images/stories/virtuemart/product/16_B8X_Ballistic_Crash_N_1.png" height="150" width="150">
-            </div>
-        <div class="crash-two" data-key="82">
-                <div class="crash-two-label label">R</div>
-                <img src="https://www.soundattak.co.uk/images/stories/virtuemart/product/16_B8X_Ballistic_Crash_N_1.png" height="140" width="140">
-        </div>
-        <div class="splash" data-key="84">
-                <div class="splash-label label">T</div>
-                <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products971430-1200x1200--833770334.png" height="95" width="95">
-        </div>
-        <div class="china" data-key="89">
-                <div class="china-label label">Y</div>
-                <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products963123-1200x1200-2798915.png" height="130" width="130">
-        </div>
-    </div>
-    <div class="library">
+        <div class="drum-kit">
 
-    </div>
+                <div class="open-hat " data-key="70">
+                        <div class="hat-open-label label">F</div>
+                        <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products971430-1200x1200--833770334.png"
+                                height="116" width="116">
+                </div>
+                <div class="close-hat" data-key="68">
+                        <div class="hat-closed-label label">D</div>
+                        <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products971430-1200x1200--833770334.png"
+                                height="116" width="116">
+                </div>
+                <div class="snare" data-key="71">
+                        <div class="snare-label label">G</div>
+                        <img src="http://remo-production.s3.amazonaws.com/media/product_images/ambassador-x-skyndeep.png.600x600_q90_crop-scale.png"
+                                height="145" width="145">
+                </div>
+                <div class="kick1" data-key="86">
+                        <div class="kick-one-label label">V</div>
+                        <img src="http://drumheadauthority.com/wp-content/uploads/2017/05/Remo-Ambassador-Fiberskyn-Drumhead.png" height="215" width="215">
+                </div>
+                <div class="kick2" data-key="66">
+                        <div class="kick-two-label label">B</div>
+                        <img src="http://drumheadauthority.com/wp-content/uploads/2017/05/Remo-Ambassador-Fiberskyn-Drumhead.png" height="215" width="215">
+                </div>
+                <div class="floor" data-key="75">
+                        <div class="floor-label label">K</div>
+                        <img src="http://remo-production.s3.amazonaws.com/media/product_images/emperor-hazy-snare-side.png.600x600_q90_crop-scale.png"
+                                height="165" width="165">
+                </div>
+
+                <div class="tom1" data-key="72">
+                        <div class="tom-one-label label">H</div>
+                        <img src="http://remo-production.s3.amazonaws.com/media/product_images/emperor-hazy-snare-side.png.600x600_q90_crop-scale.png"
+                                height="110" width="110">
+                </div>
+                <div class="tom2" data-key="74">
+                        <div class="tom-two-label label">J</div>
+                        <img src="http://remo-production.s3.amazonaws.com/media/product_images/emperor-hazy-snare-side.png.600x600_q90_crop-scale.png"
+                                height="125" width="125">
+                </div>
+                <div class="ride" data-key="85">
+                        <div class="ride-label label">U</div>
+                        <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products977132-1200x1200-1822702398.png"
+                                height="188" width="188">
+                </div>
+                <div class="crash-one" data-key="73">
+                        <div class="crash-one-label label">I</div>
+                        <img src="https://www.soundattak.co.uk/images/stories/virtuemart/product/16_B8X_Ballistic_Crash_N_1.png" height="150" width="150">
+                </div>
+                <div class="crash-two" data-key="82">
+                        <div class="crash-two-label label">R</div>
+                        <img src="https://www.soundattak.co.uk/images/stories/virtuemart/product/16_B8X_Ballistic_Crash_N_1.png" height="140" width="140">
+                </div>
+                <div class="splash" data-key="84">
+                        <div class="splash-label label">T</div>
+                        <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products971430-1200x1200--833770334.png"
+                                height="95" width="95">
+                </div>
+                <div class="china" data-key="89">
+                        <div class="china-label label">Y</div>
+                        <img src="https://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products963123-1200x1200-2798915.png" height="130"
+                                width="130">
+                </div>
+        </div>
+        <div class="library">
+                <div class="tracklist">
+                        
+                </div>
+                <div class="masterPlay">
+                        <button id="master-play" class="fas fa-play-circle"></button>
+                </div>                
+        </div>
 
 
-    <audio data-key="73" src="sounds/crash1.wav"></audio>
-    <audio data-key="68" src="sounds/hihat.wav"></audio>
-    <audio data-key="66" src="sounds/kick1.wav"></audio>
-    <audio data-key="86" src="sounds/kick1.wav"></audio>
-    <audio data-key="70" src="sounds/openhat.wav"></audio>
-    <audio data-key="82" src="sounds/crash2.wav"></audio>
-    <audio data-key="85" src="sounds/ride.wav"></audio>
-    <audio data-key="71" src="sounds/snare1.wav"></audio>
-    <audio data-key="72" src="sounds/tom1.wav"></audio>
-    <audio data-key="74" src="sounds/tom2.wav"></audio>
-    <audio data-key="84" src="sounds/splash.wav"></audio>
-    <audio data-key="75" src="sounds/floor.wav"></audio>
-    <audio data-key="89" src="sounds/china.wav"></audio>
+        <audio data-key="73" src="sounds/crash1.wav"></audio>
+        <audio data-key="68" src="sounds/hihat.wav"></audio>
+        <audio data-key="66" src="sounds/bigkick.wav"></audio>
+        <audio data-key="86" src="sounds/bigkick.wav"></audio>
+        <audio data-key="70" src="sounds/openhat.wav"></audio>
+        <audio data-key="82" src="sounds/crash2.wav"></audio>
+        <audio data-key="85" src="sounds/ride.wav"></audio>
+        <audio data-key="71" src="sounds/snare1.wav"></audio>
+        <audio data-key="72" src="sounds/tom-a.wav"></audio>
+        <audio data-key="74" src="sounds/tom-b.wav"></audio>
+        <audio data-key="84" src="sounds/splash.wav"></audio>
+        <audio data-key="75" src="sounds/floortom.wav"></audio>
+        <audio data-key="89" src="sounds/china.wav"></audio>
 </body>
+
 </html>
+
+

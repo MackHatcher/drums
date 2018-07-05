@@ -289,12 +289,57 @@ body {
     border-radius: 20px;
 }
 
+.filled {
+    color: white;
+}
+
 .library {
     width: 500px;
     background-color: rgb(107, 107, 107);
     margin-left: 70px;
 }
 
+.button {
+    width: 70px;
+    height: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10%;
+    background-color: transparent;
+    margin: 20px;
+}
+
+.recName {
+    width: 80px;
+    height: 25px;
+    padding: 5px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10%;
+    background-color: transparent;
+    margin: 20px;
+}
+
+.tracklist {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#master-play {
+    width: 30px;
+    height: 25px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15%;
+    background-color: transparent;
+    margin: 20px;
+    
+}
+
+#master-play:hover {
+    cursor: pointer;
+}
 
 img.shake {
     /* Start the shake animation and make the animation last for 0.5 seconds */
